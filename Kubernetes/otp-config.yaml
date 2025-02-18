@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: otp-config
+  namespace: otp-namespace
+data:
+  otp-config.json: |
+    {
+      "server": {
+        "port": 8080
+      },
+      "data": {
+        "gtfs": "/var/opentripplanner/gtfs.zip",
+        "osm": "/var/opentripplanner/osm.pbf"
+      }
+    }
